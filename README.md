@@ -6,3 +6,5 @@ During the pandemic as my business was suffering, I started looking for a career
 
 Moving forward, in the summer of 2022, I got accepted at "IT-Högskola" as a "Developer in AI and machine learning". And I'm looking forward to keep learning everyday, in order to achieve my goal.
 
+## Contact me
+[linkedin](https://www.linkedin.com/in/elias-el-haddad-041738176/)
