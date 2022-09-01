@@ -9,7 +9,7 @@ Moving forward, in the summer of 2022, I got accepted at "IT-Högskola" as a "De
 
 ## Websites related to programming:
 
-*Check if programming is something you want to pursue by taking some basic courses*
+*Check if programming is something you want to pursue by taking some basic courses. *
 *These are my recommendation*
 
 [Udemy](https://www.udemy.com/)
