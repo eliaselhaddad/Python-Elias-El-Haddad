@@ -6,5 +6,14 @@ During the pandemic as my business was suffering, I started looking for a career
 
 Moving forward, in the summer of 2022, I got accepted at "IT-Högskola" as a "Developer in AI and machine learning". And I'm looking forward to keep learning everyday, in order to achieve my goal.
 
+
+## Websites related to programming:
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 ## Contact me
 [linkedin](https://www.linkedin.com/in/elias-el-haddad-041738176/)
