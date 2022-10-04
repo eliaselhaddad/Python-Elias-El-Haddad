@@ -1,1 +1,1 @@
-print("hej from module2")
+print("Hej from module2")
