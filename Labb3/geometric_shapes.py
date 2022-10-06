@@ -10,3 +10,18 @@ class Circle:
     @property
     def area(self):
         return pi*self.r**2
+
+    @property
+    def circumference(self):
+        return 2*pi*self.r
+
+    def __eq__(self, other) -> bool:
+        if self.area == other.area:
+            return True
+        else:
+            return False
+
+    
+
+
+
