@@ -1,5 +1,5 @@
-# from __future__ import ann
 from math import pi
+import matplotlib.pyplot as plt
 
 class Circle:
 
@@ -8,35 +8,18 @@ class Circle:
         self.y = y
         self.radius = radius
 
-    @property
-    def x(self) -> float:
-        return self._x
+        if not isinstance(x, (int, float)):
+            raise TypeError("x must be int or float")
+        if not isinstance(y, (int, float)):
+            raise TypeError("y must be int or float")
+        if not isinstance(radius, (int, float)):
+            raise TypeError("Radius must int or float")
 
-    @x.setter
-    def x(self, value: float) -> None:
-        if not isinstance(value, (float, int)):
-            raise TypeError(f"x must be a float or int not, {type(value)}")
-        self._x = value
+    def __repr__(self) -> str:
+        return f"Circle(x = {self.x}, y = {self.y}, radius = {self.radius})"
 
-    @property
-    def y(self) -> float:
-        return self._y
-
-    @y.setter
-    def y(self, value: float) -> None:
-        if not isinstance(value, (float, int)):
-            raise TypeError(f"y must be a float or int, not {type(value)}")
-        self._y = value
-
-    @property
-    def radius(self) -> float:
-        return self._radius
-
-    @radius.setter
-    def radius(self, value: float) -> None:
-        if not isinstance(value, (float, int)):
-            raise TypeError(f"radius must be a float or int, not {type(value)}")
-        self._radius = value
+    def __str__(self) -> str:
+        pass
 
     @property
     def area(self) -> float:
@@ -74,8 +57,32 @@ class Circle:
             return True
         else:
             return False
-    
 
+
+class Rectangle:
+
+    def __init__(self, x: float, y: float, width: float, height: float) -> None:
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+
+        if not isinstance(x, (int, float)):
+            raise TypeError("x must be int or float")
+        if not isinstance(y, (int, float)):
+            raise TypeError("y must be int or float")
+        if not isinstance(width, (int, float)):
+            raise TypeError("width must be int or float")
+        if not isinstance(height, (int, float)):
+            raise TypeError("height must be int or float")
+
+    @property
+    def area(self) -> float:
+        return self.width * self.height
+
+    @property
+    def perimeter(self) -> float:
+        return 2*(self.width + self.height)
 
     
 
