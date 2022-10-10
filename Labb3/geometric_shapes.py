@@ -64,7 +64,7 @@ class Circle(Shapes):
         return f"Circle(x = {self.x}, y = {self.y}, radius = {self.radius})"
 
     def __str__(self) -> str:
-        pass
+        return f"x = {self.x}, y = {self.y}, radius = {self.radius}"
 
     @property
     def area(self) -> float:
@@ -103,8 +103,18 @@ class Rectangle(Shapes):
 
         if not isinstance(width, (int, float)):
             raise TypeError("Width must int or float")
+        if width <= 0:
+            raise ValueError("width must be greater than zero") 
         if not isinstance(height, (int, float)):
-            raise TypeError("Height must int or float")
+            raise TypeError("height must int or float")
+        if height <= 0:
+            raise ValueError("height must be greater than zero")
+
+    def __repr__(self) -> str:
+        return f"Rectangle(x = {self.x}, y = {self.y}, width = {self.width}, height = {self.height})"
+
+    def __str__(self) -> str:
+        return f"x = {self.x}, y = {self.y}, width = {self.width}, height = {self.height}"
 
     @property
     def area(self) -> float:
