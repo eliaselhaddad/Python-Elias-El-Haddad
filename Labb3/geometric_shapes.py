@@ -12,10 +12,10 @@ class Shapes:
         if not isinstance(y, (int, float)):
             raise TypeError("y must be int or float")
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Shape with x: {self.x} and y: {self.y}"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Shape({self.x}, {self.y})"
 
     def __gt__(self, other) -> bool:
@@ -82,10 +82,8 @@ class Circle(Shapes):
 
     def is_inside(self, x, y) -> bool:
         distance = ((self.x - x) ** 2 + (self.y - y) ** 2)
-        if distance <= self.radius:
-            return True
-        else:
-            return False
+        return distance <= self.radius
+        
 
     def is_circle_unit(self) -> bool:
         if self.radius == 1:
@@ -132,16 +130,12 @@ class Rectangle(Shapes):
 
     def is_inside(self, x, y) -> bool:
         distance = ((self.x - x) ** 2 + (self.y - y) ** 2)
-        if distance <= self.width:
-            return True
-        else:
-            return False
+        return distance <= self.width # kolla på den
+        
 
     def is_square(self) -> bool:
-        if self.width == self.height:
-            return True
-        else:
-            return False
+        return self.width == self.height
+        
 
     
 
