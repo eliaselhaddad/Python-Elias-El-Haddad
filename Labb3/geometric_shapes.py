@@ -47,10 +47,10 @@ class Shapes:
 
     def translate(self, x: float, y: float) -> None:
         '''a method that makes it possible to move x and y to a new position '''
-        if not isinstance(x, (int, float)):
+        if not isinstance(x, (float, int)):
             raise TypeError("x must be int or float")
-        if not isinstance(y, (int, float)):
-            raise TypeError("Y must be int or float")
+        if not isinstance(y, (float, int)):
+            raise TypeError("y must be int or float")
         self.x += x
         self.y += y
 
@@ -92,6 +92,10 @@ class Circle(Shapes):
 
     def is_inside(self, x, y) -> bool:
         '''a method to check if a point is inside the circle'''
+        if not isinstance(x, (float, int)):
+            raise TypeError("x must be int or float")
+        if not isinstance(y, (float, int)):
+            raise TypeError("y must be int or float")
         distance = ((self.x - x) ** 2 + (self.y - y) ** 2)
         return distance < self.radius
         
@@ -152,6 +156,10 @@ class Rectangle(Shapes):
         return self.area == other.area
 
     def is_inside(self, x, y) -> bool:
+        if not isinstance(x, (float, int)):
+            raise TypeError("x must be int or float")
+        if not isinstance(y, (float, int)):
+            raise TypeError("y must be int or float")
         '''a method to check if a point is inside a rectangle'''
         return (self.x - self.width / 2 <= x <= self.x + self.width / 2) and (self.y - self.height / 2 <= y <= self.y + self.height / 2)
 
